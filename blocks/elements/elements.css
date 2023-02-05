@@ -1,0 +1,149 @@
+.elements__container {
+  display: grid;
+  margin: 0 auto;
+
+}
+
+
+
+
+@media screen and (min-width:980px) {
+  .elements {
+    padding-top: 50px;
+
+  }
+
+  .elements__container {
+    grid-template-columns: repeat(3, minmax(150px, 282px));
+    row-gap: 20px;
+    column-gap: 17px;
+    max-width: 100%;
+  }
+
+  .list {
+    box-sizing: border-box;
+  }
+
+  .elements__item {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+
+  }
+
+  .elements__image {
+    max-width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .elements__title-zone {
+    display: flex;
+    background-color: aliceblue;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 25px 32px 31px 21px;
+    align-items: center;
+    justify-content: space-between;
+
+
+  }
+
+  .elements__title {
+    margin: 0;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 29px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+
+
+  }
+
+  .elements__like-btn {
+    transition: transform .05s linear;
+    width: 22px;
+    height: 19px;
+    display: flex;
+    transition: transform 3.s linear;
+  }
+
+}
+
+
+
+
+
+
+@media screen and (max-width:979px) {
+  .elements {
+    padding-top: 36px;
+    max-width: 88.125%;
+    margin: 0 auto;
+  }
+
+  .elements__container {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+
+  .list {
+    box-sizing: border-box;
+  }
+
+  .elements__item {
+    display: flex;
+    flex-direction: column;
+    min-width: 282px;
+    box-sizing: border-box;
+
+  }
+
+  .elements__image {
+    max-width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .elements__title-zone {
+    display: flex;
+    background-color: aliceblue;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 25px 32px 31px 21px;
+    align-items: center;
+    justify-content: space-between;
+
+
+  }
+
+  .elements__title {
+    margin: 0;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 29px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+
+
+  }
+
+  .elements__like-btn {
+    transition: transform .05s linear;
+    width: 22px;
+    height: 19px;
+    display: flex;
+    transition: transform 3.s linear;
+  }
+
+
+}

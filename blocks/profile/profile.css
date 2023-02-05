@@ -1,0 +1,123 @@
+
+.profile.subtitle {
+  line-height: 1.21;
+  margin: 0;
+}
+
+.profile__title {
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  margin: 0;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.profile__btn-add,  .profile__edit-btn {
+  align-items: center;
+  justify-content: center;
+}
+
+
+@media screen and (min-width: 980px) {
+  .profile {
+    display: grid;
+    grid-template-columns: 120px 336px auto;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .profile__image {
+    max-width: 120px;
+    border-radius: 50%;
+  }
+
+  .profile__info {
+    color: white;
+  }
+
+  .profile__title {
+    margin: 0 0 12px;
+    font-size: 42px;
+    line-height: 1.1428571429;
+    justify-content: baseline;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .profile__subtitle {
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+
+  }
+
+  .profile__btn-add {
+    justify-self: end;
+    width: 150px;
+    max-width: 150px;
+    height: 50px;
+    border: 2px solid #fff;
+  }
+
+  .profile__edit-btn {
+    margin-top: 7px;
+    border: 1px solid #fff;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media screen and (max-width: 979px) {
+  .profile {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .profile__image {
+    max-width: 120px;
+    border-radius: 50%;
+  }
+
+  .profile__info {
+    text-align: center;
+    color: white;
+  }
+
+  .profile__title {
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    margin: 0 0 12px;
+    font-size: calc(24px + 30.6 * ((100vw - 320px) / 980));
+    line-height: 1, 21037037037037;
+    font-weight: 500;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .profile__subtitle {
+    margin: 0;
+    font-size: calc(14px + 6.8 * ((100vw - 320px) / 980));
+
+
+  }
+
+  .profile__btn-add {
+    justify-self: end;
+
+    width: 100%;
+    max-width: 300px;
+    height: 50px;
+    border: 2px solid #fff;
+  }
+
+  .profile__edit-btn {
+    border: 1px solid #fff;
+    width: calc(18px + 10.2 * ((100vw - 320px) / 980));
+    height: calc(18px + 10.2 * ((100vw - 320px) / 980));
+  }
+}
