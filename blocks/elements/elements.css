@@ -64,10 +64,10 @@
 
   .elements__like-btn {
     transition: transform .05s linear;
+    -webkit-transition: transform .05s linear;
     width: 22px;
     height: 19px;
     display: flex;
-    transition: transform 3.s linear;
   }
 
 }
