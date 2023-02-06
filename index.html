@@ -176,6 +176,7 @@
     profileBtnEdit.addEventListener('click', () => {
       if (popup.classList !== 'popup_opened'){
         popup.classList.add('popup_opened')
+        document.querySelector('.page').style.overflow = 'hidden';
 
       }
     })
@@ -184,6 +185,7 @@
       if (popup.classList[1] === 'popup_opened') {
         popup.classList.remove('popup_opened')
         renderInput();
+        document.querySelector('.page').style.overflow = '';
 
       }
     })
