@@ -162,11 +162,14 @@
         if (el.id  === 'name' &&  el.value !== profileTitle.textContent){
           profileTitle.textContent = el.value;
           popup.classList.remove('popup_opened');
+          document.querySelector('.page').style.overflow = '';
+
         }
         if (el.id  === 'description' &&  el.value !== profileSubtitle.textContent){
 
           profileSubtitle.textContent = el.value;
           popup.classList.remove('popup_opened');
+          document.querySelector('.page').style.overflow = '';
         }
 
       });
@@ -194,10 +197,13 @@
       popupInput.forEach(el => {
         if (el.id === 'name' && (el.value === '' || el.value !== profileTitle.textContent)) {
           el.value = profileTitle.textContent;
+
         }
         
         if (el.id === 'description' && (el.value === '' || el.value !== profileSubtitle.textContent)) {
           el.value = profileSubtitle.textContent;
+  
+          
         }
       })
     }
