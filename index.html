@@ -18,9 +18,9 @@
     <div class="profile">
       <img src="./images/profile-image.png" alt="В небольшом кругу изображение профиля" class="profile__image">
       <div class="profile__info">
-          <h1 class="profile__title">Жак-Ив Кусто
-          </h1>
-          <p class="profile__subtitle">Исследователь океана</p>
+        <h1 class="profile__title">Жак-Ив Кусто
+        </h1>
+        <p class="profile__subtitle">Исследователь океана</p>
       </div>
       <button class="profile__btn-edit button opacity">
         <svg width="10" height="10" viewBox="0 0 10 10" fill="" xmlns="http://www.w3.org/2000/svg">
@@ -159,13 +159,13 @@
     popupBtnSave.addEventListener('click', () => {
       popupInput.forEach(el => {
         event.preventDefault();
-        if (el.id  === 'name' &&  el.value !== profileTitle.textContent){
+        if (el.id === 'name' && el.value !== profileTitle.textContent) {
           profileTitle.textContent = el.value;
           popup.classList.remove('popup_opened');
           document.querySelector('.page').style.overflow = '';
 
         }
-        if (el.id  === 'description' &&  el.value !== profileSubtitle.textContent){
+        if (el.id === 'description' && el.value !== profileSubtitle.textContent) {
 
           profileSubtitle.textContent = el.value;
           popup.classList.remove('popup_opened');
@@ -177,7 +177,7 @@
 
 
     profileBtnEdit.addEventListener('click', () => {
-      if (popup.classList !== 'popup_opened'){
+      if (popup.classList !== 'popup_opened') {
         popup.classList.add('popup_opened')
         document.querySelector('.page').style.overflow = 'hidden';
 
@@ -199,11 +199,11 @@
           el.value = profileTitle.textContent;
 
         }
-        
+
         if (el.id === 'description' && (el.value === '' || el.value !== profileSubtitle.textContent)) {
           el.value = profileSubtitle.textContent;
-  
-          
+
+
         }
       })
     }
@@ -218,18 +218,24 @@
         if (likeBtn.classList[2] !== 'elements__like-btn_active') {
           likeBtn.style['-webkit-transform'] = 'scale(0)'
           likeBtn.classList.toggle('elements__like-btn_active');
-          likeBtn.innerHTML = templateLikeActive;
           setTimeout(() => {
+
             likeBtn.style.transform = 'scale(1)'
-          }, 50);
+          }, 200)
+
+          setTimeout(() => {
+            likeBtn.innerHTML = templateLikeActive;
+          }, 200);
           console.log()
         } else {
           likeBtn.style['-webkit-transform'] = 'scale(0)'
           likeBtn.classList.toggle('elements__like-btn_active');
-          likeBtn.innerHTML = templateLikeDisabled;
           setTimeout(() => {
             likeBtn.style['-webkit-transform'] = 'scale(1)'
-          }, 50);
+          }, 200)
+          setTimeout(() => {
+            likeBtn.innerHTML = templateLikeDisabled;
+          }, 200);
         }
       })
     })
@@ -248,8 +254,8 @@
                     fill="black" />
                 </svg>`
 
-    renderInput()  
-    
+    renderInput()
+
   </script>
 </body>
 
