@@ -63,14 +63,21 @@
   }
 
   .elements__like-btn {
-    transition: transform .05s linear;
-    -webkit-transition: transform .05s linear;
+    transition: transform .2s linear;
+    -webkit-transition: transform .2s linear;
     width: 22px;
     height: 19px;
     display: flex;
   }
 
+  @media (hover:hover) {
+    .elements__like-btn:hover {
+      opacity: 0.6;
+    }
+
+  }
 }
+
 
 
 
@@ -120,6 +127,9 @@
     padding: 25px 32px 31px 21px;
     align-items: center;
     justify-content: space-between;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 
 
   }
@@ -130,9 +140,7 @@
     font-weight: 900;
     font-size: 24px;
     line-height: 29px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
+
 
 
   }
@@ -142,7 +150,7 @@
     width: 22px;
     height: 19px;
     display: flex;
-    
+
   }
 
 

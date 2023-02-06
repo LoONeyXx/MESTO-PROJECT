@@ -43,9 +43,16 @@
     max-width: 150px;
     height: 50px;
     border: 2px solid #fff;
+
   }
 
-  .profile__edit-btn {
+  @media (hover:hover) {
+    .profile__btn-add:hover {
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+  }
+
+  .profile__btn-edit {
     margin-top: 7px;
     border: 1px solid #fff;
     width: 24px;
@@ -74,7 +81,7 @@
   .profile__title {
     font-family: "Inter", Arial, Helvetica, sans-serif;
     margin: 0 0 12px;
-    @include adaptiv-size(font-size,24 , 42, 0.7,320 ,1280 );
+    @include adaptiv-size(font-size, 24, 42, 0.7, 320, 1280);
     line-height: 1, 21037037037037;
     font-weight: 500;
     display: flex;
@@ -85,7 +92,7 @@
 
   .profile__subtitle {
     margin: 0;
-    @include adaptiv-size(font-size,14 , 18, 0.7,320 , 980 );
+    @include adaptiv-size(font-size, 14, 18, 0.7, 320, 980);
   }
 
   .profile__btn-add {
@@ -95,10 +102,10 @@
     border: 2px solid #fff;
   }
 
-  .profile__edit-btn {
+  .profile__btn-edit {
     margin-top: 7px;
     border: 1px solid #fff;
-    @include adaptiv-size(width,18 , 24, 0.7,320 , 980 );
-    @include adaptiv-size(height,18 , 24, 0.7,320 , 980 );
+    @include adaptiv-size(width, 18, 24, 0.7, 320, 980);
+    @include adaptiv-size(height, 18, 24, 0.7, 320, 980);
   }
 }
