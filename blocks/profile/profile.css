@@ -23,14 +23,11 @@
 .profile__info {
   box-sizing: border-box;
   color: white;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
 }
 
 .profile__btn-edit {
   border: 1px solid #fff;
-  height: 24px;
+
   align-items: center;
   justify-content: center;
 }
@@ -82,6 +79,8 @@
   .profile__btn-edit {
     margin-top: 32px;
     align-self: start;
+    height: 24px;
+    width: 24px;
   }
 }
 

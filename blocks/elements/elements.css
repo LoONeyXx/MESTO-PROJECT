@@ -32,8 +32,8 @@
 }
 
 .elements__like-btn {
-  transition: transform .2s linear;
   -webkit-transition: transform .2s linear;
+  transition: transform .2s linear;
   width: 22px;
   height: 19px;
   display: flex;
