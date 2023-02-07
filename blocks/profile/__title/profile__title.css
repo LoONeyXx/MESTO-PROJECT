@@ -2,11 +2,12 @@
 	font-family: "Inter", Arial, Helvetica, sans-serif;
 	margin: 0;
 	font-weight: 500;
-	display: flex;
+
 }
 
 @media screen and (min-width: 980px) {
 	.profile__title {
+		grid-area: title;
 		font-size: 42px;
 		line-height: 1.1428571429;
 	}
@@ -14,10 +15,8 @@
 
 @media screen and (max-width: 979px) {
 	.profile__title {
-		margin-left:26px;
-		gap:10px;
-		align-items: center;
-		font-size: calc(24px + 30.6 * ((100vw - 320px) / 980));
+		font-size: calc(27px + 30.6 * ((100vw - 320px) / 980));
 		line-height: 1.21037037037037;
+		text-align: center;
 	}
 }

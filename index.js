@@ -12,12 +12,12 @@ function handleFormSubmit(evt) {
 	evt.preventDefault();
 	popupInput.forEach((el) => {
 		if (el.id === "name" && el.value !== profileTitle.textContent) {
-			profileTitle.textContent = el.value;
+			profileTitle.textContent = el.value.trim(' ');
 			popup.classList.remove("popup_opened");
 			document.querySelector(".page").style.overflow = "";
 		}
 		if (el.id === "description" && el.value !== profileSubtitle.textContent) {
-			profileSubtitle.textContent = el.value;
+			profileSubtitle.textContent = el.value.trim(' ');
 			popup.classList.remove("popup_opened");
 			document.querySelector(".page").style.overflow = "";
 		}
@@ -47,14 +47,14 @@ function renderInput() {
 			el.id === "name" &&
 			(el.value === "" || el.value !== profileTitle.textContent)
 		) {
-			el.value = profileTitle.textContent;
+			el.value = profileTitle.textContent.trim(' ');
 		}
 
 		if (
 			el.id === "description" &&
 			(el.value === "" || el.value !== profileSubtitle.textContent)
 		) {
-			el.value = profileSubtitle.textContent;
+			el.value = profileSubtitle.textContent.trim(' ');
 		}
 	});
 }
@@ -69,21 +69,21 @@ elementsItems.forEach((el) => {
 			likeBtn.classList.toggle("elements__like-btn_active");
 			setTimeout(() => {
 				likeBtn.style.transform = "scale(1)";
-			}, 075);
+			}, 200);
 
 			setTimeout(() => {
 				likeBtn.innerHTML = templateLikeActive;
-			}, 075);
+			}, 200);
 			console.log();
 		} else {
 			likeBtn.style["-webkit-transform"] = "scale(0)";
 			likeBtn.classList.toggle("elements__like-btn_active");
 			setTimeout(() => {
 				likeBtn.style["-webkit-transform"] = "scale(1)";
-			}, 075);
+			}, 200);
 			setTimeout(() => {
 				likeBtn.innerHTML = templateLikeDisabled;
-			}, 075);
+			}, 200);
 		}
 	});
 });
