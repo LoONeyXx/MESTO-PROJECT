@@ -2,6 +2,7 @@
   .profile {
     align-items: center;
     display: grid;
+    grid-template-columns: -webkit-max-content -webkit-max-content auto;
     grid-template-columns: max-content max-content auto;
   }
 }

@@ -16,7 +16,7 @@ function handleFormSubmit(evt) {
 			popup.classList.remove("popup_opened");
 			document.querySelector(".page").style.overflow = "";
 		}
-		if (el.id === "description" && el.value !== profileSubtitle.textContent) {
+		if (el.id === "job" && el.value !== profileSubtitle.textContent) {
 			profileSubtitle.textContent = el.value.trim(" ");
 			popup.classList.remove("popup_opened");
 			document.querySelector(".page").style.overflow = "";
@@ -51,7 +51,7 @@ function renderInput() {
 		}
 
 		if (
-			el.id === "description" &&
+			el.id === "job" &&
 			(el.value === "" || el.value !== profileSubtitle.textContent)
 		) {
 			el.value = profileSubtitle.textContent.trim(" ");
