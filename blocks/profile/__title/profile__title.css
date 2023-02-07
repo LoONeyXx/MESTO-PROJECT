@@ -1,7 +1,8 @@
 .profile__title {
 	font-family: "Inter", Arial, Helvetica, sans-serif;
-	margin: 0 0 16px;
+	margin: 0;
 	font-weight: 500;
+	display: flex;
 }
 
 @media screen and (min-width: 980px) {
@@ -13,6 +14,9 @@
 
 @media screen and (max-width: 979px) {
 	.profile__title {
+		margin-left:26px;
+		gap:10px;
+		align-items: center;
 		font-size: calc(24px + 30.6 * ((100vw - 320px) / 980));
 		line-height: 1.21037037037037;
 	}

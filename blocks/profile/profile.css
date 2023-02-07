@@ -1,19 +1,11 @@
 .profile {
 	align-items: center;
-}
-
-@media screen and (min-width: 980px) {
-	.profile {
-		display: grid;
-		grid-template-columns: 120px max-content 24px auto;
-	}
+	display: flex;
 }
 
 @media screen and (max-width: 979px) {
 	.profile {
-		display: flex;
 		flex-direction: column;
-		gap: 30px;
 		justify-content: center;
 	}
 }

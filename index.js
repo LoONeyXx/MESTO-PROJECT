@@ -6,10 +6,11 @@ const profileSubtitle = document.querySelector(".profile__subtitle");
 const profileBtnEdit = document.querySelector(".profile__btn-edit");
 const popupBtnClose = popup.querySelector(".popup__btn-close");
 const popupBtnSave = popup.querySelector(".popup__btn-save");
+const popupForm = popup.querySelector(".popup__form");
 
-popupBtnSave.addEventListener("click", () => {
+function handleFormSubmit(evt) {
+	evt.preventDefault();
 	popupInput.forEach((el) => {
-		event.preventDefault();
 		if (el.id === "name" && el.value !== profileTitle.textContent) {
 			profileTitle.textContent = el.value;
 			popup.classList.remove("popup_opened");
@@ -21,7 +22,7 @@ popupBtnSave.addEventListener("click", () => {
 			document.querySelector(".page").style.overflow = "";
 		}
 	});
-});
+}
 
 profileBtnEdit.addEventListener("click", () => {
 	if (popup.classList !== "popup_opened") {
@@ -37,6 +38,8 @@ popupBtnClose.addEventListener("click", (el) => {
 		document.querySelector(".page").style.overflow = "";
 	}
 });
+
+popupForm.addEventListener("submit", handleFormSubmit);
 
 function renderInput() {
 	popupInput.forEach((el) => {

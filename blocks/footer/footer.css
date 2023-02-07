@@ -1,0 +1,29 @@
+.footer__copytight {
+	margin: 0;
+	color: #545454;
+	font-family: "Inter", Arial, Helvetica, sans-serif;
+}
+@media screen and (min-width: 980px) {
+	.footer__copytight {
+		font-size: 18px;
+		line-height: 22px;
+	}
+}
+
+@media screen and (max-width: 979px) {
+	.footer__copytight {
+		font-size: 14px;
+		line-height: 17px;
+	}
+}
+
+@media screen and (min-width: 980px) {
+	.footer {
+		margin-top: 66px;
+	}
+}
+@media screen and (max-width: 979px) {
+	.footer {
+		margin-top: 48px;
+	}
+}

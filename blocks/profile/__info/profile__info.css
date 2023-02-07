@@ -1,5 +1,7 @@
 .profile__info {
 	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
 	color: white;
 }
 @media screen and (min-width: 980px) {
@@ -12,5 +14,7 @@
 @media screen and (max-width: 979px) {
 	.profile__info {
 		text-align: center;
+		margin: 26px auto 36px;
+		gap: 14px;
 	}
 }

@@ -1,6 +1,6 @@
 .elements__like-btn {
-	-webkit-transition: transform 0.2s linear;
-	transition: transform 0.2s linear;
+	-webkit-transition: transform .075s linear;
+	transition: transform .075s linear;
 	width: 22px;
 	height: 19px;
 	display: flex;

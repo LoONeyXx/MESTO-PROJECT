@@ -1,9 +1,8 @@
 .content {
   margin: 0 auto;
-
 }
 
-@media screen and (min-width:990px) {
+@media screen and (min-width:980px) {
   .content {
     width: 68.75%;
     max-width: 880px;
@@ -13,7 +12,8 @@
 @media screen and (max-width:989px){
    .content {
     width: 88.125%;
-    min-width: 320px;
+    min-width: 282px;
+
    }
 }
 

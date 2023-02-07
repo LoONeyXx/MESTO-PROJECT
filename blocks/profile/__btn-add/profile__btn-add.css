@@ -4,6 +4,7 @@
 	justify-self: end;
 	height: 50px;
 	border: 2px solid #fff;
+
 }
 
 @media (hover: hover) {
@@ -16,6 +17,7 @@
 	.profile__btn-add {
 		width: 150px;
 		max-width: 150px;
+		margin-left:auto;
 	}
 }
 
