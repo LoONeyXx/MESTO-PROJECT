@@ -21,6 +21,7 @@ function handleFormSubmit(evt) {
 			popup.classList.remove("popup_opened");
 			document.querySelector(".page").style.overflow = "";
 		}
+    renderInput();
 	});
 }
 
@@ -34,7 +35,6 @@ profileBtnEdit.addEventListener("click", () => {
 popupBtnClose.addEventListener("click", (el) => {
 	if (popup.classList[1] === "popup_opened") {
 		popup.classList.remove("popup_opened");
-		renderInput();
 		document.querySelector(".page").style.overflow = "";
 	}
 });
@@ -44,15 +44,13 @@ popupForm.addEventListener("submit", handleFormSubmit);
 function renderInput() {
 	popupInput.forEach((el) => {
 		if (
-			el.id === "name" &&
-			(el.value === "" || el.value !== profileTitle.textContent)
+			el.id === "name" && (el.value === "" || el.value !== profileTitle.textContent)
 		) {
 			el.value = profileTitle.textContent.trim(" ");
 		}
 
 		if (
-			el.id === "description" &&
-			(el.value === "" || el.value !== profileSubtitle.textContent)
+			el.id === "description" && (el.value === "" || el.value !== profileSubtitle.textContent)
 		) {
 			el.value = profileSubtitle.textContent.trim(" ");
 		}
