@@ -1,119 +1,19 @@
-.profile__title {
-  font-family: 'Inter', Arial, Helvetica, sans-serif;
-  margin: 0 0 16px;
-  font-weight: 500;
-
-}
-
 .profile {
-  align-items: center;
-}
-
-
-.profile__subtitle {
-  font-family: 'Inter', Arial, Helvetica, sans-serif;
-  margin: 0;
-}
-
-.profile__image {
-  max-width: 120px;
-  border-radius: 50%;
-}
-
-.profile__info {
-  box-sizing: border-box;
-  color: white;
-}
-
-.profile__btn-edit {
-  border: 1px solid #fff;
-
-  align-items: center;
-  justify-content: center;
-}
-
-.profile__btn-add {
-  align-items: center;
-  justify-content: center;
-  justify-self: end;
-  height: 50px;
-  border: 2px solid #fff;
-
-}
-
-@media (hover:hover) {
-  .profile__btn-add:hover {
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  }
+	align-items: center;
 }
 
 @media screen and (min-width: 980px) {
-  .profile {
-    display: grid;
-    grid-template-columns: 120px max-content 24px auto;
-  }
-
-
-  .profile__info {
-    margin: 0 18px 0 30px;
-    max-width: 294px;
-  }
-
-  .profile__title {
-
-    font-size: 42px;
-    line-height: 1.1428571429;
-
-  }
-
-  .profile__subtitle {
-    font-size: 18px;
-    line-height: 22px;
-  }
-
-  .profile__btn-add {
-    width: 150px;
-    max-width: 150px;
-  }
-
-  .profile__btn-edit {
-    margin-top: 32px;
-    align-self: start;
-    height: 24px;
-    width: 24px;
-  }
+	.profile {
+		display: grid;
+		grid-template-columns: 120px max-content 24px auto;
+	}
 }
 
-
 @media screen and (max-width: 979px) {
-  .profile {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    justify-content: center;
-  }
-
-  .profile__info {
-    text-align: center;
-  }
-
-  .profile__title {
-
-    font-size: calc(24px + 30.6 * ((100vw - 320px) / 980));
-    line-height: 1.21037037037037;
-  }
-
-  .profile__subtitle {
-    font-size: calc(14px + 6.8 * ((100vw - 320px) / 980));
-  }
-
-  .profile__btn-add {
-    width: 100%;
-    max-width: 300px;
-  }
-
-  .profile__btn-edit {
-    width: calc(18px + 10.2 * ((100vw - 320px) / 980));
-    height: calc(18px + 10.2 * ((100vw - 320px) / 980));
-  }
+	.profile {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+		justify-content: center;
+	}
 }

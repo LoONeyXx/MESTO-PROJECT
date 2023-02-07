@@ -1,0 +1,22 @@
+.profile__btn-edit {
+	border: 1px solid #fff;
+
+	align-items: center;
+	justify-content: center;
+}
+
+@media screen and (min-width: 980px) {
+	.profile__btn-edit {
+		margin-top: 32px;
+		align-self: start;
+		height: 24px;
+		width: 24px;
+	}
+}
+
+@media screen and (max-width: 979px) {
+	.profile__btn-edit {
+		width: calc(18px + 10.2 * ((100vw - 320px) / 980));
+		height: calc(18px + 10.2 * ((100vw - 320px) / 980));
+	}
+}

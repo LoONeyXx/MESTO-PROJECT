@@ -1,0 +1,17 @@
+.profile__subtitle {
+	font-family: "Inter", Arial, Helvetica, sans-serif;
+	margin: 0;
+}
+
+@media screen and (min-width: 980px) {
+	.profile__subtitle {
+		font-size: 18px;
+		line-height: 22px;
+	}
+}
+
+@media screen and (max-width: 979px) {
+	.profile__subtitle {
+		font-size: calc(14px + 6.8 * ((100vw - 320px) / 980));
+	}
+}

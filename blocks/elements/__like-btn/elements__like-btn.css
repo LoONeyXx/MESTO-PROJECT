@@ -1,0 +1,13 @@
+.elements__like-btn {
+	-webkit-transition: transform 0.2s linear;
+	transition: transform 0.2s linear;
+	width: 22px;
+	height: 19px;
+	display: flex;
+}
+
+@media (hover: hover) {
+	.elements__like-btn:hover {
+		opacity: 0.6;
+	}
+}

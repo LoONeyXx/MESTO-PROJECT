@@ -1,10 +1,10 @@
 .opacity {
-  -webkit-transition: opacity .2s linear;
-  transition: opacity .2s linear;
+	-webkit-transition: opacity 0.2s linear;
+	transition: opacity 0.2s linear;
 }
 
-@media (hover:hover) {
-  .opacity:hover {
-    opacity: 0.8;
-  }
+@media (hover: hover) {
+	.opacity:hover {
+		opacity: 0.8;
+	}
 }

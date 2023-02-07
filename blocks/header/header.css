@@ -1,23 +1,19 @@
 .header {
-  border-bottom: #545454 solid 1px;
-  max-width: 880px;
-
+	border-bottom: #545454 solid 1px;
+	max-width: 880px;
 }
 
-@media screen and (min-width:980px) {
-  .header {
-    margin: 0 auto 40px;
-    padding: 0 0 41px 0;
-    width: 68.75%;
-
-
-  }
-
+@media screen and (min-width: 980px) {
+	.header {
+		margin: 0 auto 40px;
+		padding: 0 0 41px 0;
+		width: 68.75%;
+	}
 }
 
-@media screen and (max-width:979px) {
-  .header {
-    padding: 0 0 31px 27px;
-    margin: 0 auto 42px;
-  }
+@media screen and (max-width: 979px) {
+	.header {
+		padding: 0 0 31px 27px;
+		margin: 0 auto 42px;
+	}
 }

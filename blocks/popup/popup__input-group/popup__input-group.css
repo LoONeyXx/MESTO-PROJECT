@@ -1,0 +1,6 @@
+.popup__input-group {
+	all: unset;
+	display: flex;
+	gap: 30px;
+	flex-direction: column;
+}
