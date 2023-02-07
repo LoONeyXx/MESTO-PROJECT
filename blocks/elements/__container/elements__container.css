@@ -13,7 +13,7 @@
 	}
 }
 
-@media screen and (max-width: 979px) {
+@media screen and (max-width: 979.99px) {
 	.elements__container {
 		display: flex;
 		gap: 20px;

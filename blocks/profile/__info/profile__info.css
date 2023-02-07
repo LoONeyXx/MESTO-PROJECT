@@ -18,7 +18,7 @@
 	}
 }
 
-@media screen and (max-width: 979px) {
+@media screen and (max-width: 979.99px) {
 	.profile__info {
 		display: grid;
 		grid-template-columns: minmax(189px, max-content) 18px;

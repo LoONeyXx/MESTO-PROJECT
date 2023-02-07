@@ -14,10 +14,11 @@
 	}
 }
 
-@media screen and (max-width: 979px) {
+@media screen and (max-width: 979.99px) {
 	.profile__btn-edit {
 		align-self: center;
 		width: calc(18px + 10.2 * ((100vw - 320px) / 980));
 		height: calc(18px + 10.2 * ((100vw - 320px) / 980));
+    margin-top:6px;
 	}
 }

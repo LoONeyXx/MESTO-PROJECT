@@ -1,11 +1,17 @@
-.profile {
-	align-items: center;
-	display: flex;
+@media screen and (min-width:980px) {
+  .profile {
+    align-items: center;
+    display: grid;
+    grid-template-columns: max-content max-content auto;
+  }
 }
 
-@media screen and (max-width: 979px) {
+
+@media screen and (max-width: 979.99px) {
 	.profile {
+    display: flex;
 		flex-direction: column;
+    align-items: center;
 		justify-content: center;
 	}
 }

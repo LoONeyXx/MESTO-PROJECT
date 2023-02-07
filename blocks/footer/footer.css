@@ -10,7 +10,7 @@
 	}
 }
 
-@media screen and (max-width: 979px) {
+@media screen and (max-width: 979.99px) {
 	.footer__copytight {
 		font-size: 14px;
 		line-height: 17px;
@@ -22,7 +22,7 @@
 		margin-top: 66px;
 	}
 }
-@media screen and (max-width: 979px) {
+@media screen and (max-width: 979.99px) {
 	.footer {
 		margin-top: 48px;
 	}
