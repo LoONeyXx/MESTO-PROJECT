@@ -65,10 +65,10 @@ elementsItems.forEach((el) => {
 	const likeBtn = el.querySelector(".elements__like-btn");
 	likeBtn.addEventListener("click", () => {
 		if (likeBtn.classList[2] !== "elements__like-btn_active") {
-			likeBtn.style["-webkit-transform"] = "scale(0)";
+			likeBtn.style["-webkit-transform"] = "scale(0) translateZ(0)";
 			likeBtn.classList.toggle("elements__like-btn_active");
 			setTimeout(() => {
-				likeBtn.style.transform = "scale(1)";
+				likeBtn.style.transform = "scale(1) translateZ(0)";
 			}, 075);
 
 			setTimeout(() => {
@@ -76,10 +76,10 @@ elementsItems.forEach((el) => {
 			}, 075);
 			console.log();
 		} else {
-			likeBtn.style["-webkit-transform"] = "scale(0)";
+			likeBtn.style["-webkit-transform"] = "scale(0) translateZ(0)";
 			likeBtn.classList.toggle("elements__like-btn_active");
 			setTimeout(() => {
-				likeBtn.style["-webkit-transform"] = "scale(1)";
+				likeBtn.style["-webkit-transform"] = "scale(1) translateZ(0)";
 			}, 075);
 			setTimeout(() => {
 				likeBtn.innerHTML = templateLikeDisabled;
