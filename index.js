@@ -69,21 +69,21 @@ elementsItems.forEach((el) => {
 			likeBtn.classList.toggle("elements__like-btn_active");
 			setTimeout(() => {
 				likeBtn.style.transform = "scale(1)";
-			}, 200);
+			}, 075);
 
 			setTimeout(() => {
 				likeBtn.innerHTML = templateLikeActive;
-			}, 200);
+			}, 075);
 			console.log();
 		} else {
 			likeBtn.style["-webkit-transform"] = "scale(0)";
 			likeBtn.classList.toggle("elements__like-btn_active");
 			setTimeout(() => {
 				likeBtn.style["-webkit-transform"] = "scale(1)";
-			}, 200);
+			}, 075);
 			setTimeout(() => {
 				likeBtn.innerHTML = templateLikeDisabled;
-			}, 200);
+			}, 075);
 		}
 	});
 });
