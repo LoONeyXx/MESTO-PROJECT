@@ -1,3 +1,5 @@
 .elements__like-active {
-  display: none !important;
+  display: none;
+  -webkit-transform: scale(0);
+  transform: scale(0);
 }
