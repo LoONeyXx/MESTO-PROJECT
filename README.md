@@ -1,4 +1,4 @@
-<h1  align="center"><a hfer="https://looneyxx.github.io/MESTO-PROJECT/)">MESTO</a></h1>
+<h1  align="center"><a href="https://looneyxx.github.io/MESTO-PROJECT/html.index)">MESTO</a></h1>
 <p float="left">
 <p align="center">
 <img   width="580px" height="650px" alt="По маленькой" src="https://i.ibb.co/yS1YfD9/main-illustration.png">
