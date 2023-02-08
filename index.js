@@ -95,7 +95,7 @@ elementsItems.forEach((el) => {
 			}, 075);
 			setTimeout(() => {
 				disabledLike.style.display = "none";
-				activeLike.style.display = "block";
+				activeLike.style.display = "block !important";
 			}, 075);
 		} else {
 			likeBtn.style["-webkit-transform"] = "scale(0) translateZ(0)";
@@ -104,7 +104,7 @@ elementsItems.forEach((el) => {
 				likeBtn.style["-webkit-transform"] = "scale(1) translateZ(0)";
 			}, 075);
 			setTimeout(() => {
-				disabledLike.style.display = "block";
+				disabledLike.style.display = "block !important";
 				activeLike.style.display = "none";
 			}, 075);
 		}
