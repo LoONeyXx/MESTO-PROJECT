@@ -1,7 +1,9 @@
 /*            Popup перменные        */
 const popupEditProfile = document.querySelector(".popup_type_edit-profile");
 const popupAddCards = document.querySelector(".popup_type_add-card");
-const popupInputName = popupEditProfile.querySelector(".popup__input_type_name");
+const popupInputName = popupEditProfile.querySelector(
+  ".popup__input_type_name"
+);
 const popupInputJob = popupEditProfile.querySelector(".popup__input_type-job");
 const popupBtnsClose = document.querySelectorAll(".popup__btn-close");
 const popupForm = document.querySelectorAll(".popup__form");
@@ -11,27 +13,14 @@ const profileSubtitle = document.querySelector(".profile__subtitle");
 const profileBtnEdit = document.querySelector(".profile__btn-edit");
 const profileAddBtn = document.querySelector(".profile__btn-add");
 //  Перменные карточек
-const elementsContainer = document.querySelector('.elements__container')
-const elementsItem = Array.from(document.querySelectorAll(".elements__item"));
-const elementsTitleInput = document.querySelector('.popup__input_type_card-title')
-const elementsLinkInput = document.querySelector('.popup__input_type-link')
-const elementsImage = document.querySelectorAll('.elements__image')
-const templateItem = document.querySelector('.template-item')
-
-
-/*       Функция добавления новых карточек         */
-function addedNewCard() {
-  const newCard = document.querySelector('.elements__item').cloneNode(true)
-  const imgCard = newCard.querySelector('img')
-  const titleCard = newCard.querySelector('h2')
-  titleCard.textContent = elementsTitleInput.value
-  imgCard.src = elementsLinkInput.value
-  elementsContainer.prepend(newCard)
-  initialCards.unshift({name: elementsTitleInput.value, link: elementsLinkInput.value})
-  console.log(initialCards)
-}
-
-
+const cardsContainer = document.querySelector(".cards__container");
+const cardsItem = Array.from(document.querySelectorAll(".cards__item"));
+const cardsTitleInput = document.querySelector(
+  ".popup__input_type_card-title"
+);
+const cardsLinkInput = document.querySelector(".popup__input_type-link");
+const cardsImage = document.querySelectorAll(".cards__image");
+const templateItem = document.querySelector(".template-item");
 
 // Обьект названия и ссылки карточек
 
@@ -61,17 +50,34 @@ const initialCards = [
     link: "./images/yaroslavl.png",
   },
 ];
+
+/*       Функция добавления новых карточек         */
+
+function addedNewCard() {
+  const newCard = document.querySelector(".cards__item").cloneNode(true);
+  const imgCard = newCard.querySelector("img");
+  const titleCard = newCard.querySelector("h2");
+  titleCard.textContent = cardsTitleInput.value;
+  imgCard.src = cardsLinkInput.value;
+  cardsContainer.prepend(newCard);
+  initialCards.unshift({
+    name: cardsTitleInput.value,
+    link: cardsLinkInput.value,
+  });
+  console.log(initialCards);
+}
+
 /*     Функция для рендера инпут полей     */
 
 function renderInput(popup) {
-
   if (popup.classList.value.includes("popup_type_edit-profile")) {
     popupInputName.value = profileTitle.textContent.trim(" ");
     popupInputJob.value = profileSubtitle.textContent.trim(" ");
   } else {
-    elementsTitleInput.value = ''.trim(' ')
-    elementsLinkInput.value = ''.trim(' ')
-}}
+    cardsTitleInput.value = "".trim(" ");
+    cardsLinkInput.value = "".trim(" ");
+  }
+}
 
 /*            Функция переключение состояния кнопки Like             */
 
@@ -80,9 +86,9 @@ function toogleLike(evt) {
   const activeLike = "url('./images/like.svg')"
   const disabledLike = "url('images/like_active.svg')"
   el.style.transition = "transform 0.1s linear";
-  if (!el.classList.value.includes("elements__like-btn-active")) {
+  if (!el.classList.value.includes("cards__like-btn-active")) {
     el.style["-webkit-transform"] = "scale(0) translateZ(0)";
-    el.classList.add("elements__like-btn-active");
+    el.classList.add("cards__like-btn-active");
     setTimeout(() => {
       el.style["-webkit-transform"] = "scale(1) translateZ(0)";
     }, 100);
@@ -92,7 +98,7 @@ function toogleLike(evt) {
   } else {
     console.log(el.classList[2]);
     el.style["-webkit-transform"] = "scale(0) translateZ(0)";
-    el.classList.remove("elements__like-btn-active");
+    el.classList.remove("cards__like-btn-active");
     setTimeout(() => {
       el.style.transform = "scale(1) translateZ(0)";
     }, 100);
@@ -114,7 +120,7 @@ function openPopup(evt) {
   if (popupBtn.classList.value.includes("profile__btn-add")) {
     addTransition(popupAddCards, "all 0.3s linear");
     popupAddCards.classList.add("popup_opened");
-    renderInput(popupAddCards)
+    renderInput(popupAddCards);
   } else {
     popupEditProfile.classList.add("popup_opened");
     addTransition(popupEditProfile, "all 0.3s linear");
@@ -127,7 +133,7 @@ function closePopup(evt) {
   const popupElement = evt.target;
 
   if (
-    popupElement.classList.value.includes("popup__close-btn_type_add-cards") ||
+    popupElement.classList.value.includes("popup__btn-close_type_add-cards") ||
     popupElement.getAttribute("name") === "popup-form-cards"
   ) {
     popupAddCards.classList.remove("popup_opened");
@@ -144,7 +150,7 @@ function deletedCard(evt) {
 /*          Функция рендера Карточек        */
 
 function renderCards() {
-  elementsItem.map((el, i) => {
+  cardsItem.map((el, i) => {
     const image = el.querySelector("img");
     const title = el.querySelector("h2");
     image.src = initialCards[i].link;
@@ -161,17 +167,19 @@ function handleFormSubmit(evt) {
     profileTitle.textContent = popupInputName.value;
     profileSubtitle.textContent = popupInputJob.value;
     closePopup(evt);
-
   } else {
-    addedNewCard()
+    addedNewCard();
     closePopup(evt);
-renderEventListener()
-}}
+    renderEventListener();
+  }
+}
 
 /*     Прослушка событий для кнопок close и edit add в профиле     */
 function renderEventListener() {
-  const likeBtns = Array.from(document.querySelectorAll(".elements__like-btn"));
-  const elementBtnsDelete = Array.from(document.querySelectorAll(".elements__delete-btn"));
+  const likeBtns = Array.from(document.querySelectorAll(".cards__like-btn"));
+  const elementBtnsDelete = Array.from(
+    document.querySelectorAll(".cards__delete-btn")
+  );
   profileAddBtn.addEventListener("click", openPopup);
 
   profileBtnEdit.addEventListener("click", openPopup);
@@ -186,5 +194,3 @@ function renderEventListener() {
 
 renderEventListener();
 renderCards();
-
-

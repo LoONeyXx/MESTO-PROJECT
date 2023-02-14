@@ -1,4 +1,4 @@
-.elements__container {
+.cards__container {
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, minmax(150px, 282px));
@@ -7,7 +7,7 @@
 }
 
 @media screen and (max-width: 980px) {
-  .elements__container {
+  .cards__container {
     display: flex;
     gap: 20px;
     flex-direction: column;
