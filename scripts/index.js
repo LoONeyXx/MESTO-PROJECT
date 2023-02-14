@@ -77,8 +77,8 @@ function renderInput(popup) {
 
 function toogleLike(evt) {
   const el = evt.target;
-  const activeLike = `url('../../../images/like.svg')`;
-  const disabledLike = `url('../../../images/like_active.svg')`;
+  const activeLike = "url('./images/like.svg')"
+  const disabledLike = "url('images/like_active.svg')"
   el.style.transition = "transform 0.1s linear";
   if (!el.classList.value.includes("elements__like-btn-active")) {
     el.style["-webkit-transform"] = "scale(0) translateZ(0)";
