@@ -15,9 +15,7 @@ const profileAddBtn = document.querySelector(".profile__btn-add");
 //  Перменные карточек
 const cardsContainer = document.querySelector(".cards__container");
 const cardsItem = Array.from(document.querySelectorAll(".cards__item"));
-const cardsTitleInput = document.querySelector(
-  ".popup__input_type_card-title"
-);
+const cardsTitleInput = document.querySelector(".popup__input_type_card-title");
 const cardsLinkInput = document.querySelector(".popup__input_type-link");
 const cardsImage = document.querySelectorAll(".cards__image");
 const templateItem = document.querySelector(".template-item");
@@ -83,8 +81,8 @@ function renderInput(popup) {
 
 function toogleLike(evt) {
   const el = evt.target;
-  const activeLike = "url('./images/like.svg')"
-  const disabledLike = "url('images/like_active.svg')"
+  const activeLike = "url('./images/like.svg')";
+  const disabledLike = "url('images/like_active.svg')";
   el.style.transition = "transform 0.1s linear";
   if (!el.classList.value.includes("cards__like-btn-active")) {
     el.style["-webkit-transform"] = "scale(0) translateZ(0)";
@@ -108,22 +106,18 @@ function toogleLike(evt) {
   }
 }
 
-/*        Функция добавления свойства Transition            */
 
-function addTransition(el, value) {
-  el.style.transition = value;
-}
 /*             Функция открытия Popup             */
 
 function openPopup(evt) {
   const popupBtn = evt.target;
   if (popupBtn.classList.value.includes("profile__btn-add")) {
-    addTransition(popupAddCards, "all 0.3s linear");
+    popupAddCards.style.transitin = "all 0.3s linear";
     popupAddCards.classList.add("popup_opened");
     renderInput(popupAddCards);
   } else {
     popupEditProfile.classList.add("popup_opened");
-    addTransition(popupEditProfile, "all 0.3s linear");
+    popupEditProfile.style.transition = "all 0.3s linear";
     renderInput(popupEditProfile);
   }
 }
