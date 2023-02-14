@@ -1,13 +1,12 @@
-@media screen and (min-width: 980px) {
-	.elements {
-		padding-top: 50px;
-	}
+.elements {
+  padding-top: 50px;
+
 }
 
-@media screen and (max-width: 979.99px) {
-	.elements {
-		padding-top: 36px;
-		max-width: 100%;
-		margin: 0 auto;
-	}
+@media screen and (max-width: 980px) {
+  .elements {
+    padding-top: 36px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
 }

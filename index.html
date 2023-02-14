@@ -1,176 +1,143 @@
 <!DOCTYPE html>
 <html lang="ru">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="./index.css" />
-		<title>Document</title>
-	</head>
 
-	<body class="page">
-		<header class="header">
-			<img alt="Логотип MESTO RUSSIA" src="./images/logo.svg" class="logo" />
-		</header>
-		<main class="content">
-			<div class="profile">
-				<img
-					src="./images/icon.png"
-					alt="В небольшом кругу изображение профиля"
-					class="profile__image" />
-				<div class="profile__info">
-					<h1 class="profile__title">LoONeyXx</h1>
-					<button class="profile__btn-edit button opacity">
-						<img
-							src="./images/edit-btn.svg"
-							alt="маленький карандаш кнопка для редактирования" />
-					</button>
-					<p class="profile__subtitle">Просто хороший человек</p>
-				</div>
-				<button class="profile__btn-add button opacity">
-					<img
-						src="./images/add-btn.svg"
-						alt="белый знак плюса на черной кнопке" />
-				</button>
-			</div>
-			<section class="popup">
-				<div class="popup__container">
-					<button class="button popup__btn-close opacity">
-						<img src="./images/Close Icon.svg" alt="крестик закрывания окна" />
-					</button>
-					<h2 class="popup__title">Редактировать профиль</h2>
-					<form action="#" class="popup__form">
-						<fieldset class="popup__input-group">
-							<input class="popup__input" type="text" name="name" id="name" />
-							<input class="popup__input" type="text" name="job" id="job" />
-						</fieldset>
-						<button class="button popup__btn-save" type="submit">
-							Cохранить
-						</button>
-					</form>
-				</div>
-			</section>
-			<section class="elements">
-				<ul class="list elements__container">
-					<li class="elements__item">
-						<img
-							src="./images/ekat.png"
-							alt="На изображении длинный прямоугольный бассей в котором расположены фонтаны и вокруг зона прогулки и все это на фоне города и виднеющегося обелиска"
-							class="elements__image" />
-						<div class="elements__title-zone">
-							<h2 class="elements__title">Екатеринбург</h2>
-							<button class="button elements__like-btn">
-								<img
-									class="elements__like-disabled"
-									src="./images/like.svg"
-									alt="сердце черный контур с белой заливкой на белом фоне" />
-								<img
-									class="elements__like-active"
-									src="./images/like_active.svg"
-									alt="сердце с черной заливкой" />
-							</button>
-						</div>
-					</li>
-					<li class="elements__item">
-						<img
-							src="./images/moscow.png"
-							alt="Вечернаяя Москва с высоты птичьего полета и знаменитая Останкинская башня. Башня горит разноцветными огнями"
-							class="elements__image" />
-						<div class="elements__title-zone">
-							<h2 class="elements__title">Москва</h2>
-							<button class="button elements__like-btn">
-								<img
-									class="elements__like-disabled"
-									src="./images/like.svg"
-									alt="сердце черный контур с белой заливкой на белом фоне" />
-								<img
-									class="elements__like-active"
-									src="./images/like_active.svg"
-									alt="сердце с черной заливкой" />
-							</button>
-						</div>
-					</li>
-					<li class="elements__item">
-						<img
-							src="./images/peter.png"
-							alt="Изображения набережной где много чаек и все это на ярко оранжево-красном закате где вдалеке виднеется высокая конусновидная башня 'Лахта центр', который является самым большим небоскребом в Европе"
-							class="elements__image" />
-						<div class="elements__title-zone">
-							<h2 class="elements__title">Санкт-Петербург</h2>
-							<button class="button elements__like-btn">
-								<img
-									class="elements__like-disabled"
-									src="./images/like.svg"
-									alt="сердце черный контур с белой заливкой на белом фоне" />
-								<img
-									class="elements__like-active"
-									src="./images/like_active.svg"
-									alt="сердце с черной заливкой" />
-							</button>
-						</div>
-					</li>
-					<li class="elements__item">
-						<img
-							src="./images/tula.png"
-							alt="Холмы на фоне рассвета"
-							class="elements__image" />
-						<div class="elements__title-zone">
-							<h2 class="elements__title">Тула</h2>
-							<button class="button elements__like-btn">
-								<img
-									class="elements__like-disabled"
-									src="./images/like.svg"
-									alt="Изображение площади в цетрн которой стоит памятник Никите Димидову славный тем что построил первый в Росси чугуноплавительный завод. Вокруг памятника красиво высажение красно белые цветы. На заднем плане виднеется монастырь." />
-								<img
-									class="elements__like-active"
-									src="./images/like_active.svg"
-									alt="сердце с черной заливкой" />
-							</button>
-						</div>
-					</li>
-					<li class="elements__item">
-						<img src="./images/sochi.png" alt="На изображении мы видим фотографию сочинского олимпийского огня. У конструкции основание состоит из большого круглого бассейна с фонтанами над которыми и возвышается сам факел" class="elements__image" />
-						<div class="elements__title-zone">
-							<h2 class="elements__title">Сочи</h2>
-							<button class="button elements__like-btn">
-								<img
-									class="elements__like-disabled"
-									src="./images/like.svg"
-									alt="сердце черный контур с белой заливкой на белом фоне" />
-								<img
-									class="elements__like-active"
-									src="./images/like_active.svg"
-									alt="сердце с черной заливкой" />
-							</button>
-						</div>
-					</li>
-					<li class="elements__item">
-						<img
-							src="./images/yaroslavl.png"
-							alt="На изображении Ярославский художественный музей построенный в 1820 году. Цвет у него желтый с красивой архитектурой  к главному ходу тянется длинный снисходящий пандус как слева так исправа. Во дворе красиво постриженные кусты загругленной формы и кругый бассейн. Погода солнечная"
-							class="elements__image" />
-						<div class="elements__title-zone">
-							<h2 class="elements__title">Ярославль</h2>
-							<button class="button elements__like-btn">
-								<img
-									class="elements__like-disabled"
-									src="./images/like.svg"
-									alt="сердце черный контур с белой заливкой на белом фоне" />
-								<img
-									class="elements__like-active"
-									src="./images/like_active.svg"
-									alt="сердце с черной заливкой" />
-							</button>
-						</div>
-					</li>
-				</ul>
-			</section>
-		</main>
-		<div class="content">
-			<section class="footer">
-				<p class="footer__copytight">© 2020 Mesto Russia</p>
-			</section>
-		</div>
-		<script src="./index.js"></script>
-	</body>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./pages/index.css">
+  <title>Mesto</title>
+</head>
+
+<body class="page">
+  <header class="header">
+    <img alt="Логотип MESTO RUSSIA" src="./images/logo.svg" class="logo">
+  </header>
+  <main class="content">
+    <section class="profile">
+      <img src="./images/icon.png" alt="В небольшом кругу изображение профиля" class="profile__image">
+      <div class="profile__info">
+        <h1 class="profile__title">LoONeyXx</h1>
+        <button type="button" class="profile__btn-edit button opacity"></button>
+        <p class="profile__subtitle">Просто хороший человек</p>
+      </div>
+      <button type="button" class="profile__btn-add button opacity"></button>
+    </section>
+    <section class="popup popup_type_edit-profile">
+      <div class="popup__container">
+        <button type="button" class="button popup__btn-close opacity"></button>
+        <h2 class="popup__title">Редактировать профиль</h2>
+        <form name="popup-form-edit" action="#" class="popup__form">
+          <fieldset class="popup__input-group">
+            <input class="popup__input popup__input_type_name" type="text" name="name" id="name">
+            <input class="popup__input popup__input_type-job" type="text" name="job" id="job">
+          </fieldset>
+          <button class="button popup__btn-save popup__btn-save_type_edit-profile" type="submit">
+            Cохранить
+          </button>
+        </form>
+      </div>
+    </section>
+    <section class="popup popup_type_add-card">
+      <div class="popup__container">
+        <button type="button" class="button popup__btn-close popup__close-btn_type_add-cards opacity"></button>
+        <h2 class="popup__title">Новое место</h2>
+        <form name="popup-form-cards" action="#" class="popup__form">
+          <fieldset class="popup__input-group popup__input-group_type">
+            <input placeholder='Название' class="popup__input popup__input_type_card-title" type="text" name="card-title" id="card-title">
+            <input placeholder='Ссылка на картинку' class="popup__input popup__input_type-link" type="text" name="link-image" id="link-image">
+          </fieldset>
+          <button class="button popup__btn-save" type="submit">
+            Создать
+          </button>
+        </form>
+      </div>
+    </section>
+    <section class="elements">
+      <template class="template-item">
+         <li class="elements__item">
+          <button class="button elements__delete-btn"></button>
+          <img src=""
+            alt="На изображении длинный прямоугольный бассей в котором расположены фонтаны и вокруг зона прогулки и все это на фоне города и виднеющегося обелиска"
+            class="elements__image">
+          <div class="elements__title-zone">
+            <h2 class="elements__title"></h2>
+            <button type="button" class="button elements__like-btn">
+            </button>
+          </div>
+        </li>
+      </template>
+      <ul class="list elements__container">
+        <li class="elements__item">
+          <button class="button elements__delete-btn"></button>
+          <img src=""
+            alt="На изображении длинный прямоугольный бассей в котором расположены фонтаны и вокруг зона прогулки и все это на фоне города и виднеющегося обелиска"
+            class="elements__image">
+          <div class="elements__title-zone">
+            <h2 class="elements__title"></h2>
+            <button type="button" class="button elements__like-btn">
+            </button>
+          </div>
+        </li>
+        <li class="elements__item">
+          <button class="button elements__delete-btn"></button>
+          <img src=""
+            alt="Вечернаяя Москва с высоты птичьего полета и знаменитая Останкинская башня. Башня горит разноцветными огнями"
+            class="elements__image">
+          <div class="elements__title-zone">
+            <h2 class="elements__title"></h2>
+            <button type="button" class="button elements__like-btn">
+            </button>
+          </div>
+        </li>
+        <li class="elements__item">
+          <button class="button elements__delete-btn"></button>
+          <img src=""
+            alt="Изображения набережной где много чаек и все это на ярко оранжево-красном закате где вдалеке виднеется высокая конусновидная башня 'Лахта центр', который является самым большим небоскребом в Европе"
+            class="elements__image">
+          <div class="elements__title-zone">
+            <h2 class="elements__title"></h2>
+            <button type="button" class="button elements__like-btn"></button>
+          </div>
+        </li>
+        <li class="elements__item">
+          <button class="button elements__delete-btn"></button>
+          <img src="" alt="Изображение площади в цетрн которой стоит памятник Никите Димидову славный тем что построил первый в Росси чугуноплавительный завод. Вокруг памятника красиво высажение красно белые цветы. На заднем плане виднеется монастырь." class="elements__image">
+          <div class="elements__title-zone">
+            <h2 class="elements__title"></h2>
+            <button type="button" class="button elements__like-btn">
+            </button>
+          </div>
+        </li>
+        <li class="elements__item">
+          <button class="button elements__delete-btn"></button>
+          <img src=""
+            alt="На изображении мы видим фотографию сочинского олимпийского огня. У конструкции основание состоит из большого круглого бассейна с фонтанами над которыми и возвышается сам факел"
+            class="elements__image">
+          <div class="elements__title-zone">
+            <h2 class="elements__title"></h2>
+            <button type="button" class="button elements__like-btn">
+            </button>
+          </div>
+        </li>
+        <li class="elements__item">
+          <button class="button elements__delete-btn"></button>
+          <img src=""
+            alt="На изображении Ярославский художественный музей построенный в 1820 году. Цвет у него желтый с красивой архитектурой  к главному ходу тянется длинный снисходящий пандус как слева так исправа. Во дворе красиво постриженные кусты загругленной формы и кругый бассейн. Погода солнечная"
+            class="elements__image">
+          <div class="elements__title-zone">
+            <h2 class="elements__title"></h2>
+            <button type="button" class="button elements__like-btn">
+            </button>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+  <footer class="footer">
+    <p class="footer__copytight">© 2020 Mesto Russia</p>
+  </footer>
+  <script src="./scripts/index.js"></script>
+</body>
+
 </html>

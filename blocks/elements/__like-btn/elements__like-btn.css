@@ -1,13 +1,17 @@
 .elements__like-btn {
-	-webkit-transition: transform .1s linear;
-	transition: transform .1s linear;
-	width: 22px;
-	height: 19px;
-	display: flex;
+  box-sizing: border-box;
+  -webkit-transition: opacity 0.1s linear;
+  transition: opacity 0.1s linear;
+  min-width: 22px;
+  min-height: 19px;
+  display: flex;
+  background-image: url('../../../images/like.svg');
+  background-position: center;
+  background-size: cover;
 }
 
-@media (hover: hover) {
-	.elements__like-btn:hover {
-		opacity: 0.6;
-	}
+@media (hover:hover) {
+  .elements__like-btn:hover {
+    opacity: 0.5;
+  }
 }

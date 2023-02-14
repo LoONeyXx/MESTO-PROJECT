@@ -1,9 +1,16 @@
 .popup__form {
-	-webkit-appearance: none;
-	   -moz-appearance: none;
-	        appearance: none;
-	display: flex;
-	flex-direction: column;
-	margin: 54px auto 0;
-	gap: 48px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: flex;
+  flex-direction: column;
+  margin: 49px auto 0;
+  gap: 48px;
+}
+
+@media screen and (max-width: 980px) {
+  .popup__form {
+    gap: 45px;
+    margin-top: 75px;
+  }
 }
