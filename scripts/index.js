@@ -112,12 +112,12 @@ function toogleLike(evt) {
 function openPopup(evt) {
   const popupBtn = evt.target;
   if (popupBtn.classList.value.includes("profile__btn-add")) {
-    popupAddCards.style.transitin = "all 0.3s linear";
+    popupAddCards.style.transition = "all 0.3s linear";
     popupAddCards.classList.add("popup_opened");
     renderInput(popupAddCards);
   } else {
-    popupEditProfile.classList.add("popup_opened");
     popupEditProfile.style.transition = "all 0.3s linear";
+    popupEditProfile.classList.add("popup_opened");
     renderInput(popupEditProfile);
   }
 }
