@@ -1,8 +1,0 @@
-.header {
-	max-width: 100%;
-	@include media("max", "md") {
-		.header {
-			width: 100%;
-		}
-	}
-}
