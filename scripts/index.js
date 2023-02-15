@@ -68,6 +68,7 @@ function addedNewCard() {
   const elementBtnDelete = newCard.querySelector(".cards__delete-btn");
   elementBtnDelete.addEventListener("click", deletedCard);
   likeBtn.addEventListener("click", toogleLike);
+  imgCard.addEventListener('click',openPopup)
 }
 
 /*     Функция для рендера инпут полей     */
