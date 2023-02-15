@@ -3,4 +3,5 @@
   color:white;
   font-size: 12px;
   line-height: 14.52px;
+  flex-shrink: 0;
 }
