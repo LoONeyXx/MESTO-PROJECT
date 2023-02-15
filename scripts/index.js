@@ -2,7 +2,7 @@
 const popupEditProfile = document.querySelector(".popup_type_edit-profile");
 const popupAddCards = document.querySelector(".popup_type_add-card");
 const popupInputName = popupEditProfile.querySelector(".popup__input_type_name");
-const popupInputJob = popupEditProfile.querySelector(".popup__input_type-job");
+const popupInputJob = popupEditProfile.querySelector(".popup__input_type_job");
 const popupBtnsClose = document.querySelectorAll(".popup__btn-close");
 const popupForm = document.querySelectorAll(".popup__form");
 const popupTypeImage = document.querySelector(".popup_type_image");
@@ -18,7 +18,7 @@ const profileAddBtn = document.querySelector(".profile__btn-add");
 const cardsContainer = document.querySelector(".cards__container");
 const cardsItem = Array.from(document.querySelectorAll(".cards__item"));
 const cardsTitleInput = document.querySelector(".popup__input_type_card-title");
-const cardsLinkInput = document.querySelector(".popup__input_type-link");
+const cardsLinkInput = document.querySelector(".popup__input__type_card-link");
 const cardsImage = document.querySelectorAll(".cards__image");
 const templateItem = document.querySelector(".template-item");
 
@@ -87,41 +87,37 @@ function renderInput(popup) {
 
 function toogleLike(evt) {
   const el = evt.target;
-  const activeLike = "url('./images/like.svg')";
+  const activeLike = "url('images/like.svg')";
   const disabledLike = "url('images/like_active.svg')";
-  el.style.transition = "transform 0.075s linear";
+  el.style.transition = "transform .1s linear";
   if (!el.classList.value.includes("cards__like-btn-active")) {
     el.style["-webkit-transform"] = "scale(0) translateZ(0)";
     el.classList.add("cards__like-btn-active");
     setTimeout(() => {
       el.style["-webkit-transform"] = "scale(1) translateZ(0)";
-    }, 050);
+    }, 100);
     setTimeout(() => {
       el.style.backgroundImage = disabledLike;
-    }, 050);
+    }, 100);
   } else {
     el.style["-webkit-transform"] = "scale(0) translateZ(0)";
     el.classList.remove("cards__like-btn-active");
     setTimeout(() => {
       el.style.transform = "scale(1) translateZ(0)";
-    }, 050);
+    }, 100);
     setTimeout(() => {
       el.style.backgroundImage = activeLike;
-    }, 050);
+    }, 100);
   }
 }
 
-/*    Функция добавления свойства Transition            */
 
-function addTransition(el, value) {
-  el.style.transition = value;
-}
 /*    Функция открытия Popup             */
 
 function openPopup(evt) {
   const popupBtn = evt.target;
   if (popupBtn.classList.value.includes("profile__btn-add")) {
-    addTransition(popupAddCards, "all 0.15s linear");
+    popupAddCards.style.transition =  "all 0.3s linear";
     popupAddCards.classList.add("popup_opened");
     renderInput(popupAddCards);
   }
@@ -129,11 +125,11 @@ function openPopup(evt) {
     const cardTitle = popupBtn.parentElement.querySelector(".cards__title");
     image.src = popupBtn.src;
     imageText.textContent = cardTitle.textContent;
-    addTransition(popupTypeImage, "all 0.15s linear");
+   popupTypeImage.style.transition = "all 0.3s linear";
     popupTypeImage.classList.add("popup_opened");
   } else {
     popupEditProfile.classList.add("popup_opened");
-    addTransition(popupEditProfile, "all 0.15s linear");
+    popupEditProfile.style.transition = "all 0.3s linear";
     renderInput(popupEditProfile);
   }
 }
@@ -193,10 +189,10 @@ const likeBtns = Array.from(document.querySelectorAll(".cards__like-btn"));
 const elementBtnsDelete = Array.from(document.querySelectorAll(".cards__delete-btn"));
 profileAddBtn.addEventListener("click", openPopup);
 profileBtnEdit.addEventListener("click", openPopup);
-popupBtnsClose.forEach((el) => el.addEventListener("click", closePopup));
-popupForm.forEach((el) => el.addEventListener("submit", handleFormSubmit));
-elementBtnsDelete.forEach((el) => el.addEventListener("click", deletedCard));
-likeBtns.forEach((el) => el.addEventListener("click", toogleLike));
-cardsImage.forEach((el) => el.addEventListener("click", openPopup));
+popupBtnsClose.forEach(el => el.addEventListener("click", closePopup));
+popupForm.forEach(el => el.addEventListener("submit", handleFormSubmit));
+elementBtnsDelete.forEach(el => el.addEventListener("click", deletedCard));
+likeBtns.forEach(el => el.addEventListener("click", toogleLike));
+cardsImage.forEach(el => el.addEventListener("click", openPopup));
 
 renderCards();
