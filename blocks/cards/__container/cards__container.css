@@ -1,7 +1,7 @@
 .cards__container {
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(3, minmax(150px, 282px));
+  grid-template-columns: repeat(auto-fill, minmax(282px, 1fr));
   row-gap: 20px;
   column-gap: 17px;
 }
@@ -13,6 +13,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-width: 282px;
+    width: 100%;
+    max-width: 350px;
   }
 }
