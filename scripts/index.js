@@ -89,25 +89,25 @@ function toogleLike(evt) {
   const el = evt.target;
   const activeLike = "url('./images/like.svg')";
   const disabledLike = "url('images/like_active.svg')";
-  el.style.transition = "transform 0.1s linear";
+  el.style.transition = "transform 0.075s linear";
   if (!el.classList.value.includes("cards__like-btn-active")) {
     el.style["-webkit-transform"] = "scale(0) translateZ(0)";
     el.classList.add("cards__like-btn-active");
     setTimeout(() => {
       el.style["-webkit-transform"] = "scale(1) translateZ(0)";
-    }, 100);
+    }, 050);
     setTimeout(() => {
       el.style.backgroundImage = disabledLike;
-    }, 100);
+    }, 050);
   } else {
     el.style["-webkit-transform"] = "scale(0) translateZ(0)";
     el.classList.remove("cards__like-btn-active");
     setTimeout(() => {
       el.style.transform = "scale(1) translateZ(0)";
-    }, 100);
+    }, 050);
     setTimeout(() => {
       el.style.backgroundImage = activeLike;
-    }, 100);
+    }, 050);
   }
 }
 
@@ -121,7 +121,7 @@ function addTransition(el, value) {
 function openPopup(evt) {
   const popupBtn = evt.target;
   if (popupBtn.classList.value.includes("profile__btn-add")) {
-    addTransition(popupAddCards, "all 0.3s linear");
+    addTransition(popupAddCards, "all 0.15s linear");
     popupAddCards.classList.add("popup_opened");
     renderInput(popupAddCards);
   }
@@ -129,11 +129,11 @@ function openPopup(evt) {
     const cardTitle = popupBtn.parentElement.querySelector(".cards__title");
     image.src = popupBtn.src;
     imageText.textContent = cardTitle.textContent;
-    addTransition(popupTypeImage, "all 0.3s linear");
+    addTransition(popupTypeImage, "all 0.15s linear");
     popupTypeImage.classList.add("popup_opened");
   } else {
     popupEditProfile.classList.add("popup_opened");
-    addTransition(popupEditProfile, "all 0.3s linear");
+    addTransition(popupEditProfile, "all 0.15s linear");
     renderInput(popupEditProfile);
   }
 }
