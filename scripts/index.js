@@ -11,6 +11,9 @@ const popupImageText = document.querySelector('.popup__image-text')
 const popupFormEdit = document.querySelector(".popup__form_type_edit");
 const popupFormCards = document.querySelector(".popup__form_type_cards");
 const popupTypeImage = document.querySelector(".popup_type_image");
+const popups = document.querySelectorAll('.popup')
+const addBtnSubmit = document.querySelector('.popup__btn-save_type_cards')
+const editBtnSibmit = document.querySelector('.popup__btn-save_type_edit-profile')
 /*   Перменные профиля           */
 const profileTitle = document.querySelector(".profile__title");
 const profileSubtitle = document.querySelector(".profile__subtitle");
@@ -20,6 +23,7 @@ const profileAddBtn = document.querySelector(".profile__btn-add");
 //  Перменные карточек
 const cardsContainer = document.querySelector(".cards__container");
 const card = document.querySelector('#template-card').cloneNode(true).content
+const newCard = card.cloneNode(true)
 const cardsTitleInput = document.querySelector(".popup__input_type_card-title");
 const cardsLinkInput = document.querySelector(".popup__input_type_card-link");
 const closeBtns = document.querySelectorAll('.popup__btn-close')
@@ -64,6 +68,7 @@ function addedNewCard() {
 // Создание новой карточки
 {
   function createCard(title, link) {
+
     const newCard = card.cloneNode(true)
     const titleCard = newCard.querySelector(".cards__title");
     const imgCard = newCard.querySelector('.cards__image');
@@ -90,14 +95,12 @@ function addedNewCard() {
 
 function renderCards() {
   const cardsArray = [];
-  for (let i = 0; i < initialCards.length; i++) {
-    const cardTitle = initialCards[i].name
-    const cardLink = initialCards[i].link
-    cardsArray[i] = createCard(cardTitle, cardLink)
-    cardsContainer.append(...cardsArray)
-  }
+  initialCards.forEach(el =>
+    cardsArray.unshift(createCard(el.name, el.link))
+  )
   cardsContainer.append(...cardsArray)
 }
+
 
 /*   Функция удаления карточки  и добавление в массив InitialCards     */
 
@@ -105,37 +108,77 @@ function deletedCard(evt) {
   evt.target.closest('.cards__item').remove();
 }
 
-/*     Функция для рендера инпут полей профиля    */
+/* Функция удаления всех ошибок (используется в рендере) */
 
-function renderInputEdit() {
+function removeError(popup) {
+  const inputList = popup.querySelectorAll('.popup__input')
+  inputList.forEach(input => {
+    const errorElement = document.querySelector(`.${input.id}-error`)
+    input.classList.remove('popup__input_type_error')
+    errorElement.classList.remove('popup__input-error_visible')
+
+  })
+/* Функции активации и деактивации Submit кнопки (используется в рендере) */
+}
+function disabledBtn(button) {
+  button.classList.add('popup__btn-save_disabled')
+}
+
+function enableBtn(button) {
+  button.classList.remove('popup__btn-save_disabled')
+}
+/*     Функция для рендера формы добавления карточек    */
+function renderFormCard() {
+  removeError(popupAddCards)
+  disabledBtn(addBtnSubmit)
+  popupFormCards.reset()
+}
+
+/*     Функция для рендера формы профиля    */
+
+function renderEditForm() {
+  enableBtn(editBtnSibmit)
+  removeError(popupEditProfile)
   popupInputName.value = profileTitle.textContent.trim();
   popupInputJob.value = profileSubtitle.textContent.trim();
 
 }
-/*     Функция для рендера инпут полей добавления карточек    */
 
-function renderInputAddCards() {
-  popupFormCards.reset()
-}
 /*     Функция переключение состояния кнопки Like,*/
 
 function toogleLike(evt) {
   evt.target.classList.toggle('cards__like-btn_active')
 }
 
+
 /*    Функция открытия Popup             */
 
 function openPopup(popup) {
-
+  document.addEventListener('keydown', escapeFromPopup)
+  popup.addEventListener('click', closeOnOverlayClick)
   popup.classList.add("popup_opened");
+
 }
 
 /*   Функция закрытия Popup  */
+function escapeFromPopup(event) {
+  const openPopup = document.querySelector('.popup_opened')
+  if (event.key === 'Escape') {
+    closePopup(openPopup)
+  }
+}
+
+function closeOnOverlayClick(evt) {
+  closePopup(evt.target)
+}
 
 function closePopup(popup) {
   popup.classList.remove("popup_opened");
-}
+  document.removeEventListener('keydown', escapeFromPopup)
+  popup.removeEventListener('click', closeOnOverlayClick)
 
+
+}
 
 
 /*     Функция для открывания popup и поведение кнопки 'Сохранить'     */
@@ -156,23 +199,26 @@ function handleFormSubmit(evt) {
 
 closeBtns.forEach(button => {
   const popup = button.closest('.popup')
-  button.addEventListener('click', () => closePopup(popup))
+  button.addEventListener('click', () => {
+    closePopup(popup)
+  })
 })
 
 /*    Прослушка событий для кнопок close и edit add в профиле     */
 
 profileAddBtn.addEventListener("click", () => {
+
   openPopup(popupAddCards)
-  renderInputAddCards()
+  renderFormCard()
 });
+
 
 profileBtnEdit.addEventListener("click", () => {
   openPopup(popupEditProfile)
-  renderInputEdit()
+  renderEditForm()
 });
 
 popupFormEdit.addEventListener('submit', handleFormSubmit)
 popupFormCards.addEventListener('submit', handleFormSubmitAddCard)
-
 
 renderCards()
