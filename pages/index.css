@@ -1,4 +1,4 @@
-@import url(./../vendor/normalize.css);
+
 @import url(./../vendor/fonts/fonts.css);
 @import url(./../blocks/list/list.css);
 @import url(./../blocks/button/button.css);
@@ -42,3 +42,4 @@
 @import url(./../blocks/cards/__like-btn/_active/cards__like-btn_active.css);
 @import url(./../blocks/footer/footer.css);
 @import url(./../blocks/footer/__copyright/footer__copyright.css);
+
