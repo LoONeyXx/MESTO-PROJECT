@@ -1,5 +1,5 @@
 
-const initialCards = [
+export const initialCards = [
   {
     name: "Екатеринбург",
     link: "./images/ekat.png",
@@ -28,7 +28,7 @@ const initialCards = [
 
 
 
-const config = ({
+export const config = ({
   formSelector: '.popup__form',
   inputSelector: '.popup__input',
   submitButtonSelector: '.popup__btn-save',
